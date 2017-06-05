@@ -1,11 +1,11 @@
 {
-  "name": "bzerch",
+  "name": "binzerch",
   "version": "0.0.0",
   "description": "Simple binary search",
   "license": "MIT",
-  "repository": "maxhallinan/bzerch",
+  "repository": "maxhallinan/binzerch",
   "author": {
-    "name": "Maximum Hallinan",
+    "name": "Max Hallinan",
     "email": "maxhallinan@gmail.com",
     "url": "github.com/maxhallinan"
   },
@@ -19,7 +19,8 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "search",
+    "binary search"
   ],
   "dependencies": {},
   "devDependencies": {

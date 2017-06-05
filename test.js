@@ -1,9 +1,12 @@
 import test from 'ava';
-import fn from '.';
+import binzerch from '.';
 
-test('title', t => {
-	const err = t.throws(() => fn(123), TypeError);
-	t.is(err.message, 'Expected a string, got number');
+test('Throws a TypeError if second argument is not an array.', t => {
+	[undefined, null, true, 1, '', {}, () => {}].forEach(x => {
+		const err = t.throws(() => binzerch(x, x), TypeError);
 
-	t.is(fn('unicorns'), 'unicorns & rainbows');
+		t.is(err.message, `Expected a string, got ${typeof x}`);
+	});
+
+	t.notThrows(() => binzerch('foo', ['foo', 'bar', 'baz']));
 });

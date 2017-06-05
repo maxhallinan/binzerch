@@ -1,45 +1,49 @@
-# bzerch [![Build Status](https://travis-ci.org/maxhallinan/bzerch.svg?branch=master)](https://travis-ci.org/maxhallinan/bzerch)
+# binzerch
 
-> Simple binary search
+Simple binary search.
 
 
 ## Install
 
 ```
-$ npm install --save bzerch
+$ npm install --save binzerch
 ```
 
 
 ## Usage
 
 ```js
-const bzerch = require('bzerch');
+const binzerch = require('binzerch');
 
-bzerch('unicorns');
-//=> 'unicorns & rainbows'
+binzerch('foo', ['foo', 'bar', 'baz']);
+//=> 0
+
+binzerch('qux', ['foo', 'bar', 'baz']);
+//=> null
 ```
 
 
 ## API
 
-### bzerch(input, [options])
+### binzerch(item, arr)
 
-#### input
+`(x, [x]) -> Number`
 
-Type: `string`
+Returns the index of `item` in `arr` or `null` if the item is not found.
 
-Lorem ipsum.
+#### item
 
-#### options
+Type: `Number` or `String`
 
-##### foo
+The value to search for.
 
-Type: `boolean`<br>
-Default: `false`
+#### arr
 
-Lorem ipsum.
+Type: `Array[String]` or `Array[Number]`<br>
+
+The sorted array to search in.
 
 
 ## License
 
-MIT © [Maximum Hallinan](https://github.com/maxhallinan)
+MIT © [Max Hallinan](https://github.com/maxhallinan)
