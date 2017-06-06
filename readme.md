@@ -5,7 +5,7 @@ Simple binary search.
 
 ## Install
 
-```
+```shell
 $ npm install --save binzerch
 ```
 
@@ -15,11 +15,11 @@ $ npm install --save binzerch
 ```js
 const binzerch = require('binzerch');
 
-binzerch('foo', ['foo', 'bar', 'baz']);
-//=> 0
+binzerch('foo', ['bar', 'baz', 'foo']);
+//=> 2
 
-binzerch('qux', ['foo', 'bar', 'baz']);
-//=> null
+binzerch('qux', ['bar', 'baz', 'foo']);
+//=> -1
 ```
 
 
@@ -27,9 +27,7 @@ binzerch('qux', ['foo', 'bar', 'baz']);
 
 ### binzerch(item, arr)
 
-`(x, [x]) -> Number`
-
-Returns the index of `item` in `arr` or `null` if the item is not found.
+Returns the index of `item` in `arr` or `-1` if `item` is not found.
 
 #### item
 
@@ -39,7 +37,7 @@ The value to search for.
 
 #### arr
 
-Type: `Array[String]` or `Array[Number]`<br>
+Type: `Array(Number)` or `Array(String)`
 
 The sorted array to search in.
 
